@@ -1,0 +1,34 @@
+service: jiffy-starter-ts
+
+custom:
+  awsRegion: eu-west-1
+  stage: dev
+  logRetention: 14
+  deploymentBucket: serverless-deployments-${self:custom.stage}
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: ${self:custom.stage}
+  region: ${self:custom.awsRegion}
+  memorySize: 128
+  timeout: 20
+  deploymentBucket: ${self:custom.deploymentBucket}
+
+package:
+  artifact: ./dist/bundle.zip
+
+functions:
+  WidgetAPI:
+    handler: service.endpoint
+    environment:
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+
+resources:
+  Resources:
+    WidgetAPILogGroup:
+      Properties:
+        RetentionInDays: ${self:custom.logRetention}
