@@ -1,0 +1,16 @@
+{
+  "name": "@jiffycloud/jiffy-route-builder-starter-ts",
+  "description": "Jiffy Route Builder Starter - TypeScript",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": "https://github.com/jiffycloud/jiffy-route-builder-starter-ts",
+  "author": "JiffyCloud",
+  "devDependencies": {
+    "@types/node": "^8.5.1",
+    "jiffy-route-builder": "0.0.2",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "zip-webpack-plugin": "^2.1.0"
+  }
+}
