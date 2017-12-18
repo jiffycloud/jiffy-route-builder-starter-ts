@@ -1,10 +1,9 @@
-service: jiffy-starter-ts
+service: jiffy-route-builder-starter-ts
 
 custom:
   awsRegion: eu-west-1
   stage: dev
   logRetention: 14
-  deploymentBucket: serverless-deployments-${self:custom.stage}
 
 provider:
   name: aws
@@ -13,14 +12,13 @@ provider:
   region: ${self:custom.awsRegion}
   memorySize: 128
   timeout: 20
-  deploymentBucket: ${self:custom.deploymentBucket}
 
 package:
   artifact: ./dist/bundle.zip
 
 functions:
   WidgetAPI:
-    handler: service.endpoint
+    handler: bundle.endpoint
     environment:
     events:
       - http:

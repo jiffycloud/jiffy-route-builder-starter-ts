@@ -23,7 +23,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2',
-    filename: 'service.js'
+    filename: 'bundle.js'
   },
   plugins: [
     new ZipPlugin({

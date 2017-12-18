@@ -31,7 +31,7 @@ npm run deploy
 ## What's in the starter
 
 - A `handler.ts` to serve as a starting point for writing an API handler
-- A webpack configuration to compile TypeScript, and produce a bundle with all dependencies
+- A webpack configuration to compile TypeScript, and produce a bundle with all dependencies - the bundle is minified by default to reduce bundle size, which is especially important for Lambda - you can remove these if you are looking to create a development bundle
 - A `serverless.yml` file that will configure the API Gateway to proxy all requests to your API (i.e., `/{proxy+}`) to the entrypoint in `handler.ts`
 
 Make sure to take a look at the `README.md` in the  [Jiffy Route Builder](https://github.com/jiffycloud/jiffy-route-builder) project to understand how the API handler is setup. 
