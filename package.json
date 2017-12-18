@@ -5,9 +5,14 @@
   "license": "MIT",
   "repository": "https://github.com/jiffycloud/jiffy-route-builder-starter-ts",
   "author": "JiffyCloud",
+  "scripts": {
+    "build": "webpack",
+    "deploy": "serverless deploy -v"
+  },
   "devDependencies": {
     "@types/node": "^8.5.1",
     "jiffy-route-builder": "0.0.2",
+    "serverless": "^1.24.1",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0",

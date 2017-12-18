@@ -6,18 +6,6 @@ A starter project which uses the [Serverless Framework](https://serverless.com/f
 
 ## Usage
 
-You will need the Serverless Framework CLI - install if you don't have it already:
-
-```
-npm install serverless -g
-```
-
-The starter project is designed to be built with webpack - install it if you don't have it already:
-
-```
-npm install webpack -g
-```
-
 Run `npm install` within the starter project folder:
 
 ```
@@ -26,16 +14,16 @@ cd jiffy-route-builder-starter-ts
 npm install
 ```
 
-Run `webpack` to build the application bundle:
+Build the application bundle:
 
 ```
-webpack
+npm run build
 ```
 
-Use Serverless CLI to deploy the handler:
+Use Serverless to deploy the handler:
 
 ```
-serverless deploy -v
+npm run deploy
 ```
 
 
@@ -43,7 +31,7 @@ serverless deploy -v
 ## What's in the starter
 
 - A `handler.ts` to serve as a starting point for writing an API handler
-- A webpack configuration to compile TypeScript, and produce a bundle with all dependencies
+- A webpack configuration to compile TypeScript, and produce a bundle with all dependencies - the bundle is minified by default to reduce bundle size, which is especially important for Lambda - you can remove these if you are looking to create a development bundle
 - A `serverless.yml` file that will configure the API Gateway to proxy all requests to your API (i.e., `/{proxy+}`) to the entrypoint in `handler.ts`
 
 Make sure to take a look at the `README.md` in the  [Jiffy Route Builder](https://github.com/jiffycloud/jiffy-route-builder) project to understand how the API handler is setup. 
